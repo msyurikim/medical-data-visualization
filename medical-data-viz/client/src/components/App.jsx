@@ -21,11 +21,16 @@ class App extends React.Component {
     // ------------------------------------------------------------------
     // TODO: Write a get request to the /api/heartFailures endpoint here!
     // ------------------------------------------------------------------
-    
-    // ------------------------------------------------------------------
+    $.get('/api/heartFailures')
+      .done( (data) => {
+        this.setState({
+          data: data
+        })
+      });
+
     // TODO: Feed the data you receive back into your data visualization.
     // ------------------------------------------------------------------
-    
+
   }
 
 
